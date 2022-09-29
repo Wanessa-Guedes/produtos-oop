@@ -1,4 +1,4 @@
-class Item {
+/* class Item {
   constructor(category, description, price) {
     this.category = category;
     this.description = description;
@@ -38,13 +38,19 @@ class Order {
     });
     return tax;
   }
-}
+} */
+
+import Order from "./Order.js";
+import Beer from "./Beer.js";
+import Cigar from "./Cigar.js";
+import Eletronics from "./Eletronics.js";
+import Water from "./Water.js";
 
 const order = new Order();
-order.addItem(new Item("Beer", "Brahma", 6));
-order.addItem(new Item("Cigar", "Malboro", 10));
-order.addItem(new Item("Eletronics", "IPhone 13", 13000));
-order.addItem(new Item("Water", "Crystal", 1));
+order.addItem(new Beer("Beer", "Brahma", 6));
+order.addItem(new Cigar("Cigar", "Malboro", 10));
+order.addItem(new Eletronics("Eletronics", "IPhone 13", 13000));
+order.addItem(new Water("Water", "Crystal", 1));
 const taxes = order.getTaxes();
 console.log(order);
 console.log(taxes);

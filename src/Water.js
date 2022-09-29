@@ -1,11 +1,7 @@
 import Item from "./Item.js";
 
-export default class TaxItem extends Item {
+export default class Water extends Item {
   constructor(category, description, price) {
     super(category, description, price);
-  }
-
-  calculateTax(tax) {
-    return this.price * tax;
   }
 }

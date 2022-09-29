@@ -16,10 +16,10 @@ export default class Order {
   }
 
   getTaxes() {
-    let tax = 0;
+    let taxes = 0;
     this.items.forEach((item) => {
-      tax += item.price * item.calculateTax();
+      taxes += item.calculateTax(item.getTax());
     });
-    return tax;
+    return taxes;
   }
 }

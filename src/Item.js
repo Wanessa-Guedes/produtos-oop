@@ -5,10 +5,11 @@ export default class Item {
     this.price = price;
   }
 
-  calculateTax() {
-    if (this.category === "Beer") return 0.2;
-    if (this.category === "Cigar") return 0.25;
-    if (this.category === "Eletronics") return 0.3;
-    if (this.category === "Water") return 0;
+  getTax() {
+    return 0;
+  }
+
+  calculateTax(tax) {
+    return 0;
   }
 }
